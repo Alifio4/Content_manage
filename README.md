@@ -13,6 +13,7 @@ Cara menjalankan Aplikasi
 ---{{SETUP AWAL LARAVEL}}---
 -menjalankan command -composer install
 -menjalankan command -php artisan migrate
+-menjalankan command -php artisan storage:link
 -menjalankan command -php artisan serve
 
 ---{{MENJALANKAN APLIKASI}}----

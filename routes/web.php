@@ -46,16 +46,16 @@ Route::middleware(['auth:web'])->group(function () {
         });
     
     Route::group(['as' => 'produk.', 'prefix' => 'produk'], function () {
-        Route::post('/store', [ProdukController::class, 'store']);
+        Route::put('/store', [ProdukController::class, 'store']);
         Route::get('/create', [ProdukController::class, 'create']);
         Route::get('/edit/{id}', [ProdukController::class, 'edit']);
-        Route::post('/update/{id}', [ProdukController::class, 'update'])->name('update');
+        Route::put('/update/{id}', [ProdukController::class, 'update'])->name('update');
         Route::delete('/destroy/{id}', [ProdukController::class, 'destroy'])->name('destroy');
         });
     
     Route::group(['as' => 'kategori.', 'prefix' => 'kategori'], function () {
         Route::post('/store', [kategoriController::class, 'store']);
-        Route::get('/create', [kategoriController::class, 'create']);
+        Route::get('/create', [kategoriController::class, 'create'])->name('create');
         Route::get('/edit/{id}', [kategoriController::class, 'edit']);
         Route::post('/update/{id}', [kategoriController::class, 'update'])->name('update');
         Route::delete('/destroy/{id}', [kategoriController::class, 'destroy'])->name('destroy');
